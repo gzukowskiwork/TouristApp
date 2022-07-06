@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Grzegorz\Documents\backend\TouristAppBackend\TouristAppBackend.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.0" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.1-dev-00229" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0-dev-00784" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2-dev-00741" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.2.0-dev-00752" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TouristAppBackend.Infrastructure.Security\TouristAppBackend.Infrastructure.Security.csproj" />
+    <ProjectReference Include="..\TouristAppBackend.Infrastructure\TouristAppBackend.Infrastructure.csproj" />
+    <ProjectReference Include="..\TouristAppBackend.Persistance\TouristAppBackend.Persistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="C\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="C\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="StaticFiles\Images\" />
+    <Folder Include="StaticFiles\GPX\" />
+  </ItemGroup>
+
+</Project>

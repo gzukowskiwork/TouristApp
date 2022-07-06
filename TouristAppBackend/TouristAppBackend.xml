@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TouristAppBackend</name>
+    </assembly>
+    <members>
+        <member name="M:TouristAppBackend.Controllers.AddressController.GetDetails(System.Int32)">
+            <summary>
+            Returns address by id
+            </summary>
+            <param name="id">Address id</param>
+            <returns>Address by id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.AddressController.GetAll">
+            <summary>
+            Returns all Addresses
+            </summary>
+            <returns>Returns all Addresses</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.CommentController.Create(TouristAppBackend.Application.Comments.Commands.Create.CreateCommentCommand)">
+            <summary>
+            Creates new comnent
+            </summary>
+            <param name="command">CreateCommentCommand object, coordinates must be provided from frontend</param>
+            <returns>Created comment body</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.CommentController.Create(TouristAppBackend.Application.Comments.Commands.Create.CreatePictureComment.CreatePictureCommentCommand)">
+            <summary>
+            Creates new comnent
+            </summary>
+            <param name="command">CreatePictureCommentCommand object</param>
+            <returns>Created comment body</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.CommentController.Create(TouristAppBackend.Application.Comments.Commands.Create.CreateTrackComment.CreateTrackCommentCommand)">
+            <summary>
+            Creates new comnent
+            </summary>
+            <param name="command">CreateTrackCommentCommand object</param>
+            <returns>Created comment body</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.ForecastController.Create(TouristAppBackend.Application.ForecastPlaces.Commands.CreateForecastPlace.CreateForecastCommand)">
+            <summary>
+            Creates new forecast place, need to provide user id that creates place
+            </summary>
+            <param name="command">CreateForecastCommand object, coordinates must be provided from frontend</param>
+            <returns>Created forecast place Id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.ForecastController.GetAll">
+            <summary>
+            Returns all forecasts
+            </summary>
+            <returns>List of forecast view models</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.ForecastController.GetDetails(System.Int32)">
+            <summary>
+            Returns forecasts by id
+            </summary>
+            <param name="id">PlaceId</param>
+            <returns>Place by id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.ForecastController.Delete(TouristAppBackend.Application.ForecastPlaces.Commands.DeleteForecast.DeleteForecastCommand)">
+            <summary>
+            Deletes forecast by id
+            </summary>
+            <param name="command">ForecastId</param>
+            <returns>Success</returns>
+             
+        </member>
+        <member name="M:TouristAppBackend.Controllers.GpxController.Create(TouristAppBackend.Application.GpxFiles.Commands.UploadGpx.CreateGpxCommand)">
+            <summary>
+            Copy file to directory
+            </summary>
+            <param name="command">gpx file</param>
+            <returns>path to file</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.HealthChecksController.HealthCheck">
+            <summary>
+            This method checks overall status of application
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PictureController.Create(TouristAppBackend.Application.Images.Commands.UploadImage.CreateImageCommand)">
+            <summary>
+            Creates new place, need to provide user id (visitor Id) that creates place
+            </summary>
+            <param name="command">CreatePlaceCommand object, coordinates must be provided from frontend</param>
+            <returns>Created place Id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PlaceController.GetAll(System.Int32,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Returns all places
+            </summary>
+            <returns>List of place view models</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PlaceController.GetPlaceForUpdate(System.Int32)">
+            <summary>
+            Returns places by id
+            </summary>
+            <param name="id">PlaceId</param>
+            <returns>Place by id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PlaceController.Create(TouristAppBackend.Application.Places.Commands.CreatePlace.CreatePlaceCommand)">
+            <summary>
+            Creates new place, need to provide user id (visitor Id) that creates place
+            </summary>
+            <param name="command">CreatePlaceCommand object, coordinates must be provided from frontend</param>
+            <returns>Created place Id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PlaceController.Update(TouristAppBackend.Application.Places.Commands.UpdatePlace.UpdatePlaceCommand)">
+            <summary>
+            Updates place
+            </summary>
+            <param name="command">UpdatePlaceCommand object, with place id and connected coordinates id</param>
+            <returns>Updated place</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.PlaceController.Delete(TouristAppBackend.Application.Places.Commands.DeletePlace.DeletePlaceCommand)">
+            <summary>
+            Deletes place by id
+            </summary>
+            <param name="command">PlaceId</param>
+            <returns>Success</returns>
+             
+        </member>
+        <member name="M:TouristAppBackend.Controllers.TrackController.GetAll(System.Int32,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Returns all tracks
+            </summary>
+            <returns>List of tracks view models</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.TrackController.GetById(System.Int32)">
+            <summary>
+            Returns all tracks
+            </summary>
+            <returns>List of tracks view models</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.TrackController.Create(TouristAppBackend.Application.Tracks.Commands.CreateTrack.CreateTrackCommand)">
+            <summary>
+            Creates track with coordinates
+            </summary>
+            <returns>Boolean value</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.GetAll">
+            <summary>
+            Returns all users
+            </summary>
+            <returns>List of users</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.GetDetail(System.Int32)">
+            <summary>
+            Returns user by id
+            </summary>
+            <param name="id">User id</param>
+            <returns>User by id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.GetDetailForUpdate(System.Int32)">
+            <summary>
+            Returns user by id for update
+            </summary>
+            <param name="id">User id</param>
+            <returns>User by id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.Create(TouristAppBackend.Application.Users.Commands.CreateUser.CreateUserCommand)">
+            <summary>
+            Creates new user
+            </summary>
+            <param name="command">CreateUserCommand object</param>
+            <returns>Created place Id</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.Update(TouristAppBackend.Application.Users.Commands.UpdateUser.UpdateUserCommand)">
+            <summary>
+            Updates user
+            </summary>
+            <param name="command">UpdateUserCommand object</param>
+            <returns>Updated place</returns>
+            
+        </member>
+        <member name="M:TouristAppBackend.Controllers.UserController.Delete(TouristAppBackend.Application.Users.Commands.DeleteUser.DeleteUserCommand)">
+            <summary>
+            Deletes user by id
+            </summary>
+            <param name="command">UserId</param>
+            <returns>Success</returns>
+             
+        </member>
+    </members>
+</doc>

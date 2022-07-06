@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.1.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TouristAppBackend.Common\TouristAppBackend.Common.csproj" />
+    <ProjectReference Include="..\TouristAppBackend.Domain\TouristAppBackend.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Address\Commands\" />
+    <Folder Include="Comments\Commands\UpdateComment\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="GpxFiles\Queries\" />
+    <Folder Include="Images\Commands\UpdateImage\" />
+    <Folder Include="Images\Commands\DeleteImage\" />
+    <Folder Include="Images\Queries\GetPicture\" />
+    <Folder Include="Images\Queries\GetPictures\" />
+    <Folder Include="Images\Queries\GetPlacePictures\" />
+    <Folder Include="Images\Queries\GetTrackPictures\" />
+    <Folder Include="Rate\Queries\GetPlaceRating\" />
+    <Folder Include="Rate\Queries\GetTrackRating\" />
+    <Folder Include="Rate\Queries\GetImageRating\" />
+  </ItemGroup>
+
+</Project>
